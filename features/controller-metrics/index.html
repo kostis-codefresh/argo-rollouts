@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -564,8 +564,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-graphana-dashboards" class="md-nav__link">
-    Creating Graphana Dashboards
+  <a href="#creating-grafana-dashboards" class="md-nav__link">
+    Creating Grafana Dashboards
   </a>
   
 </li>
@@ -1429,8 +1429,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-graphana-dashboards" class="md-nav__link">
-    Creating Graphana Dashboards
+  <a href="#creating-grafana-dashboards" class="md-nav__link">
+    Creating Grafana Dashboards
   </a>
   
 </li>
@@ -1483,12 +1483,12 @@ for Kubernetes, but you need to <a href="https://prometheus.io/docs/prometheus/l
 <p>You can always see if the controller is reached successfully in the Prometheus "Targets" screen:</p>
 <p><a href="../controller-metrics-assets/prometheus-target.png"><img alt="Prometheus Scraping Argo Rollouts metrics" src="../controller-metrics-assets/prometheus-target.png" /></a></p>
 <p>Once the controller metrics are read by your Prometheus instance, you can use them like any other Prometheus data source.</p>
-<h2 id="creating-graphana-dashboards">Creating Graphana Dashboards<a class="headerlink" href="#creating-graphana-dashboards" title="Permanent link">&para;</a></h2>
-<p>You can easily visualize the metrics from the controller using <a href="https://grafana.com/">Graphana</a> dashboards. <a href="https://grafana.com/docs/grafana/latest/installation/kubernetes/">Install Graphana</a> in your cluster and <a href="https://prometheus.io/docs/visualization/grafana/">connect it your Prometheus instance</a>.
+<h2 id="creating-grafana-dashboards">Creating Grafana Dashboards<a class="headerlink" href="#creating-grafana-dashboards" title="Permanent link">&para;</a></h2>
+<p>You can easily visualize the metrics from the controller using <a href="https://grafana.com/">Grafana</a> dashboards. <a href="https://grafana.com/docs/grafana/latest/installation/kubernetes/">Install Grafana</a> in your cluster and <a href="https://prometheus.io/docs/visualization/grafana/">connect it your Prometheus instance</a>.
 Then you can create any dashboard by using the available metrics (described in detail in the next sections).</p>
 <p>As a starting point you can find an existing dashboard at <a href="https://github.com/argoproj/argo-rollouts/blob/master/examples/dashboard.json">https://github.com/argoproj/argo-rollouts/blob/master/examples/dashboard.json</a></p>
-<p><a href="../controller-metrics-assets/argo-rollouts-metrics.png"><img alt="Example Graphana Dashboard" src="../controller-metrics-assets/argo-rollouts-metrics.png" /></a></p>
-<p>You can import this Dashboard in your Graphana installation <a href="https://grafana.com/docs/grafana/latest/dashboards/export-import/#importing-a-dashboard">as a JSON file</a>. </p>
+<p><a href="../controller-metrics-assets/argo-rollouts-metrics.png"><img alt="Example Grafana Dashboard" src="../controller-metrics-assets/argo-rollouts-metrics.png" /></a></p>
+<p>You can import this Dashboard in your Grafana installation <a href="https://grafana.com/docs/grafana/latest/dashboards/export-import/#importing-a-dashboard">as a JSON file</a>.</p>
 <h2 id="available-metrics-for-rollout-objects">Available metrics for Rollout Objects<a class="headerlink" href="#available-metrics-for-rollout-objects" title="Permanent link">&para;</a></h2>
 <p>The Argo Rollouts controller publishes the following prometheus metrics about Argo Rollout objects.</p>
 <table>
@@ -1621,7 +1621,7 @@ Then you can create any dashboard by using the available metrics (described in d
 </tr>
 </tbody>
 </table>
-<p>In addition, the Argo Rollouts controllers offers metrics on CPU, memory and file descriptor usage as well as the process start time and current Go processes including memory stats.</p>
+<p>In addition, the Argo-rollouts offers metrics on CPU, memory and file descriptor usage as well as the process start time and memory stats of current Go processes.</p>
                 
               
               
@@ -1690,10 +1690,10 @@ Then you can create any dashboard by using the available metrics (described in d
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
       
     
   </body>
