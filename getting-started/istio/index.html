@@ -1506,7 +1506,7 @@ mandatory fields:</p>
             <span class="c1"># Reference to a VirtualService which the controller updates with canary weights</span>
             <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-vsvc</span>
             <span class="nt">routes</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">primary</span> <span class="c1"># At least one route is required</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">primary</span> <span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
 <span class="nn">...</span>
 </code></pre></div>
 <p>The VirtualService and route referenced in <code>trafficRouting.istio.virtualService</code> is required

@@ -1673,7 +1673,7 @@
           <span class="nt">virtualService</span><span class="p">:</span> 
             <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span>  <span class="c1"># required</span>
             <span class="nt">routes</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">primary</span> <span class="c1"># At least one route is required</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">primary</span> <span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
 
         <span class="c1"># NGINX Ingress Controller routing configuration</span>
         <span class="nt">nginx</span><span class="p">:</span>
