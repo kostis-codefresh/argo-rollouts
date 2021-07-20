@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/getting-started/smi/">
+        <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/features/scaledown-aborted-rs/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
     
     
       
-        <title>SMI - Argo Rollouts - Kubernetes Progressive Delivery Controller</title>
+        <title>Scaledown New Replicaset on Aborted Rollout - Argo Rollouts - Kubernetes Progressive Delivery Controller</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started-smi-service-mesh-interface" class="md-skip">
+        <a href="#scaledown-new-replicaset-on-aborted-rollout" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SMI
+              Scaledown New Replicaset on Aborted Rollout
             
           </span>
         </div>
@@ -259,14 +259,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         Getting Started
@@ -284,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         Basic Usage
       </a>
     </li>
@@ -296,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ambassador/" class="md-nav__link">
+      <a href="../../getting-started/ambassador/" class="md-nav__link">
         Ambassador
       </a>
     </li>
@@ -308,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../alb/" class="md-nav__link">
+      <a href="../../getting-started/alb/" class="md-nav__link">
         AWS ALB
       </a>
     </li>
@@ -320,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../istio/" class="md-nav__link">
+      <a href="../../getting-started/istio/" class="md-nav__link">
         Istio
       </a>
     </li>
@@ -332,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nginx/" class="md-nav__link">
+      <a href="../../getting-started/nginx/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -342,65 +340,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          SMI
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../getting-started/smi/" class="md-nav__link">
         SMI
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-deploy-the-rollout-services-and-ingress" class="md-nav__link">
-    1. Deploy the Rollout, Services, and Ingress
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-perform-an-update" class="md-nav__link">
-    2. Perform an update
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -476,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/bluegreen/" class="md-nav__link">
+      <a href="../bluegreen/" class="md-nav__link">
         BlueGreen
       </a>
     </li>
@@ -488,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/canary/" class="md-nav__link">
+      <a href="../canary/" class="md-nav__link">
         Canary
       </a>
     </li>
@@ -506,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/specification/" class="md-nav__link">
+      <a href="../specification/" class="md-nav__link">
         Rollout Spec
       </a>
     </li>
@@ -518,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/hpa-support/" class="md-nav__link">
+      <a href="../hpa-support/" class="md-nav__link">
         HPA
       </a>
     </li>
@@ -530,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/ephemeral-metadata/" class="md-nav__link">
+      <a href="../ephemeral-metadata/" class="md-nav__link">
         Ephemeral Metadata
       </a>
     </li>
@@ -542,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/restart/" class="md-nav__link">
+      <a href="../restart/" class="md-nav__link">
         Restarting Rollouts
       </a>
     </li>
@@ -554,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/anti-affinity/anti-affinity/" class="md-nav__link">
+      <a href="../anti-affinity/anti-affinity/" class="md-nav__link">
         Anti Affinity
       </a>
     </li>
@@ -566,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/helm/" class="md-nav__link">
+      <a href="../helm/" class="md-nav__link">
         Helm
       </a>
     </li>
@@ -578,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/kustomize/" class="md-nav__link">
+      <a href="../kustomize/" class="md-nav__link">
         Kustomize
       </a>
     </li>
@@ -590,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/controller-metrics/" class="md-nav__link">
+      <a href="../controller-metrics/" class="md-nav__link">
         Controller Metrics
       </a>
     </li>
@@ -632,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/traffic-management/" class="md-nav__link">
+      <a href="../traffic-management/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -644,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/traffic-management/ambassador/" class="md-nav__link">
+      <a href="../traffic-management/ambassador/" class="md-nav__link">
         Ambassador
       </a>
     </li>
@@ -656,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/traffic-management/alb/" class="md-nav__link">
+      <a href="../traffic-management/alb/" class="md-nav__link">
         AWS ALB
       </a>
     </li>
@@ -668,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/traffic-management/istio/" class="md-nav__link">
+      <a href="../traffic-management/istio/" class="md-nav__link">
         Istio
       </a>
     </li>
@@ -680,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/traffic-management/nginx/" class="md-nav__link">
+      <a href="../traffic-management/nginx/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -692,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/traffic-management/smi/" class="md-nav__link">
+      <a href="../traffic-management/smi/" class="md-nav__link">
         SMI
       </a>
     </li>
@@ -734,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/analysis/" class="md-nav__link">
+      <a href="../analysis/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -839,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/experiment/" class="md-nav__link">
+      <a href="../experiment/" class="md-nav__link">
         Experiments
       </a>
     </li>
@@ -875,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/notifications/" class="md-nav__link">
+      <a href="../notifications/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1076,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/kubectl-plugin/" class="md-nav__link">
+      <a href="../kubectl-plugin/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1628,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../getting-started/setup/" class="md-nav__link">
         Environment Setup
       </a>
     </li>
@@ -1717,35 +1661,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-deploy-the-rollout-services-and-ingress" class="md-nav__link">
-    1. Deploy the Rollout, Services, and Ingress
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-perform-an-update" class="md-nav__link">
-    2. Perform an update
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1756,121 +1671,76 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/argoproj/argo-rollouts/edit/master/docs/getting-started/smi/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/argoproj/argo-rollouts/edit/master/docs/features/scaledown-aborted-rs.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="getting-started-smi-service-mesh-interface">Getting Started - SMI (Service Mesh Interface)<a class="headerlink" href="#getting-started-smi-service-mesh-interface" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Available since v0.9</p>
-</div>
-<p>This guide covers how Argo Rollouts integrates with the Service Mesh Interface (SMI), using
-<a href="https://linkerd.io">Linkerd</a> and 
-<a href="https://github.com/kubernetes/ingress-nginx">NGINX Ingress Controller</a> for traffic shaping. 
-Since the SMI TrafficSplit resource is supported by multiple service mesh providers, the concepts
-taught here are applicable to other service mesh providers that support the interface. See 
-the <a href="https://github.com/servicemeshinterface/smi-spec#ecosystem">SMI Ecosystem</a> for other
-projects that support SMI.
-This guide builds upon the concepts of the <a href="../">basic getting started guide</a>.</p>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Kubernetes cluster with Linkerd installed</li>
-<li>Kubernetes cluster with NGINX ingress controller installed and part of the mesh</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>See the <a href="../setup/#linkerd-setup">environment setup guide for linkerd</a>
-on how to setup a local minikube environment with linkerd and nginx.</p>
-</div>
-<h2 id="1-deploy-the-rollout-services-and-ingress">1. Deploy the Rollout, Services, and Ingress<a class="headerlink" href="#1-deploy-the-rollout-services-and-ingress" title="Permanent link">&para;</a></h2>
-<p>When SMI is used as the traffic router, the Rollout canary strategy must define
-the following mandatory fields:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Rollout</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">strategy</span><span class="p">:</span>
-    <span class="nt">canary</span><span class="p">:</span>
-      <span class="c1"># Reference to a Service which the controller will update to point to the canary ReplicaSet</span>
-      <span class="nt">canaryService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-canary</span>
-      <span class="c1"># Reference to a Service which the controller will update to point to the stable ReplicaSet</span>
-      <span class="nt">stableService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-stable</span>
-      <span class="nt">trafficRouting</span><span class="p">:</span>
-        <span class="nt">smi</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
-</code></pre></div>
-<p>Run the following commands to deploy:</p>
-<ul>
-<li>A Rollout with the Linkerd <code>linkerd.io/inject: enabled</code> annotation</li>
-<li>Two Services (stable and canary)</li>
-<li>An Ingress</li>
-</ul>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/smi/rollout.yaml
-kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/smi/services.yaml
-kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/smi/ingress.yaml
-</code></pre></div>
-<p>After applying the manifests you should see the following rollout, services, and ingress resources
-in the cluster:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl get ro
-NAME            DESIRED   CURRENT   UP-TO-DATE   AVAILABLE
-rollouts-demo   <span class="m">1</span>         <span class="m">2</span>         <span class="m">1</span>            <span class="m">2</span>
-
-$ kubectl get svc
-NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT<span class="o">(</span>S<span class="o">)</span>   AGE
-rollouts-demo-canary   ClusterIP   <span class="m">10</span>.111.69.188    &lt;none&gt;        <span class="m">80</span>/TCP    23m
-rollouts-demo-stable   ClusterIP   <span class="m">10</span>.109.175.248   &lt;none&gt;        <span class="m">80</span>/TCP    23m
-
-$ kubectl get ing
-NAME                   CLASS    HOSTS                 ADDRESS        PORTS   AGE
-rollouts-demo-stable   &lt;none&gt;   rollouts-demo.local   <span class="m">192</span>.168.64.2   <span class="m">80</span>      23m
-</code></pre></div>
-<p>You should also see a TrafficSplit resource which is created automatically and owned by the rollout:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl get trafficsplit
-NAME            SERVICE
-rollouts-demo   rollouts-demo-stable
-</code></pre></div>
-<p>When inspecting the generated TrafficSplit resource, the weights are automatically configured to
-send 100% traffic to the <code>rollouts-demo-stable</code> service, and 0% traffic to the <code>rollouts-demo-canary</code>.
-These values will be updated during an update.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">split.smi-spec.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TrafficSplit</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo</span>
-  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">backends</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-canary</span>
-    <span class="nt">weight</span><span class="p">:</span> <span class="s">&quot;0&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-stable</span>
-    <span class="nt">weight</span><span class="p">:</span> <span class="s">&quot;100&quot;</span>
-  <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-stable</span>
-</code></pre></div>
-<h2 id="2-perform-an-update">2. Perform an update<a class="headerlink" href="#2-perform-an-update" title="Permanent link">&para;</a></h2>
-<p>Now perform an update the rollout by changing the image, and wait for it to reached the paused state.</p>
-<div class="highlight"><pre><span></span><code>kubectl argo rollouts <span class="nb">set</span> image rollouts-demo rollouts-demo<span class="o">=</span>argoproj/rollouts-demo:yellow
-kubectl argo rollouts get rollout rollouts-demo
-</code></pre></div>
-<p><img alt="Rollout Paused" src="../nginx/paused-rollout-nginx.png" /></p>
-<p>At this point, both the canary and stable version of the Rollout are running, with 5% of the
-traffic directed to the canary. When inspecting the TrafficSplit generated by the controller, we see
-that the weight has been updated to reflect the current <code>setWeight: 5</code> step of the canary deploy.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">split.smi-spec.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TrafficSplit</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo</span>
-  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">backends</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-canary</span>
-    <span class="nt">weight</span><span class="p">:</span> <span class="s">&quot;5&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-stable</span>
-    <span class="nt">weight</span><span class="p">:</span> <span class="s">&quot;95&quot;</span>
-  <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-stable</span>
-</code></pre></div>
-<p>As the Rollout progresses through steps, the weights in the TrafficSplit resource will be adjusted
-to match the current setWeight of the steps.</p>
+                <h1 id="scaledown-new-replicaset-on-aborted-rollout">Scaledown New Replicaset on Aborted Rollout<a class="headerlink" href="#scaledown-new-replicaset-on-aborted-rollout" title="Permanent link">&para;</a></h1>
+<p>Upon an aborted update, we may scale down the new replicaset for all strategies. Users can then choose to leave the new replicaset scaled up indefinitely by setting abortScaleDownDelaySeconds to 0, or adjust the value to something larger (or smaller).</p>
+<p>The following table summarizes the behavior under combinations of rollout strategy and <code>abortScaleDownDelaySeconds</code>. Note that <code>abortScaleDownDelaySeconds</code> is not applicable to argo-rollouts v1.0.
+<code>abortScaleDownDelaySeconds = nil</code> is the default, which means in v1.1 across all rollout strategies, the new replicaset
+is scaled down in 30 seconds on abort by default.</p>
+<table>
+<thead>
+<tr>
+<th align="right">strategy</th>
+<th align="center">v1.0 behavior</th>
+<th align="center">abortScaleDownDelaySeconds</th>
+<th align="center">v1.1 behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">blue-green</td>
+<td align="center">does not scale down</td>
+<td align="center">nil</td>
+<td align="center">scales down after 30 seconds</td>
+</tr>
+<tr>
+<td align="right">blue-green</td>
+<td align="center">does not scale down</td>
+<td align="center">0</td>
+<td align="center">does not scale down</td>
+</tr>
+<tr>
+<td align="right">blue-green</td>
+<td align="center">does not scale down</td>
+<td align="center">N</td>
+<td align="center">scales down after N seconds</td>
+</tr>
+<tr>
+<td align="right">basic canary</td>
+<td align="center">rolling update back to stable</td>
+<td align="center">N/A</td>
+<td align="center">rolling update back to stable</td>
+</tr>
+<tr>
+<td align="right">canary w/ traffic routing</td>
+<td align="center">scales down immediately</td>
+<td align="center">nil</td>
+<td align="center">scales down after 30 seconds</td>
+</tr>
+<tr>
+<td align="right">canary w/ traffic routing</td>
+<td align="center">scales down immediately</td>
+<td align="center">0</td>
+<td align="center">does not scale down</td>
+</tr>
+<tr>
+<td align="right">canary w/ traffic routing</td>
+<td align="center">scales down immediately</td>
+<td align="center">N</td>
+<td align="center">scales down after N seconds</td>
+</tr>
+<tr>
+<td align="right">canary w/ traffic routing  + setCanaryScale</td>
+<td align="center">does not scale down (bug)</td>
+<td align="center">*</td>
+<td align="center">should behave like  canary w/ traffic routing</td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -1886,41 +1756,6 @@ to match the current setWeight of the steps.</p>
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../nginx/" class="md-footer__link md-footer__link--prev" aria-label="Previous: NGINX" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              NGINX
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../dashboard/" class="md-footer__link md-footer__link--next" aria-label="Next: Dashboard" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Dashboard
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
