@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/features/experiment/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.8">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.92558b1b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -874,6 +874,13 @@
         <li class="md-nav__item">
   <a href="#integration-with-rollouts" class="md-nav__link">
     Integration With Rollouts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weighted-experiment-step-with-traffic-routing" class="md-nav__link">
+    Weighted Experiment Step with Traffic Routing
   </a>
   
 </li>
@@ -1810,6 +1817,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#weighted-experiment-step-with-traffic-routing" class="md-nav__link">
+    Weighted Experiment Step with Traffic Routing
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2016,6 +2030,54 @@ Rollout. This is despite the fact that the PodSpec are the same. This is intenti
 in order to allow the metrics of the Experiment's pods to be delineated and queried separately
 from the metrics of the Rollout pods.</p>
 </div>
+<h2 id="weighted-experiment-step-with-traffic-routing">Weighted Experiment Step with Traffic Routing<a class="headerlink" href="#weighted-experiment-step-with-traffic-routing" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Available since v1.1</p>
+</div>
+<p>A Rollout using the Canary strategy along with Traffic Routing can 
+split traffic to an experiment stack in a fine-grained manner. When
+Traffic Routing is enabled, the Rollout Experiment step allows
+traffic to be shifted to experiment pods.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is currently available only for the SMI and ALB Traffic Routers.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Rollout</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">guestbook</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">guestbook</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="nn">...</span>
+<span class="nt">strategy</span><span class="p">:</span>
+  <span class="nt">canary</span><span class="p">:</span>
+    <span class="nt">trafficRouting</span><span class="p">:</span>
+      <span class="nt">alb</span><span class="p">:</span>
+        <span class="nt">ingress</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ingress</span>
+        <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">experiment</span><span class="p">:</span>
+          <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1h</span>
+          <span class="nt">templates</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">experiment-baseline</span>
+              <span class="nt">specRef</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stable</span>
+              <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">experiment-canary</span>
+              <span class="nt">specRef</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">canary</span>
+              <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</code></pre></div>
+<p>In the above example, during an update, the first step would start
+a baseline vs. canary experiment. When pods are ready (Experiment enters
+Running phase), the rollout would direct 5% of traffic to <code>experiment-canary</code> and 5%
+to <code>experiment-baseline</code>, leaving the remaining 90% of traffic to the old stack.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a weighted experiment step with traffic routing is used, a
+service is auto-created for each experiment template. The traffic routers use
+this service to send traffic to the experiment pods.</p>
+</div>
                 
               
               
@@ -2086,10 +2148,10 @@ from the metrics of the Rollout pods.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.48dfec6c.min.js"></script>
       
     
   </body>

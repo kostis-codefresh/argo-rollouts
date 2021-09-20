@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/CONTRIBUTING/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.8">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.92558b1b.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -1923,6 +1923,8 @@
 <li><a href="https://github.com/kubernetes-sigs/kustomize/releases">kustomize</a></li>
 <li><a href="https://kubernetes.io/docs/setup/minikube/">minikube</a> or Docker for Desktop</li>
 </ul>
+<p>Kustomize is required for unit tests (<code>make test</code> is using it), so you <a href="https://kubectl.docs.kubernetes.io/installation/kustomize/">must install it</a>
+locally if you wish to make code contributions to Argo Rollouts.</p>
 <p>Argo Rollout additionally uses the following tools</p>
 <ul>
 <li><code>golangci-lint</code> to lint the project.</li>
@@ -1964,7 +1966,7 @@ go run ./cmd/rollouts-controller/main.go
 </code></pre></div>
 <h2 id="running-e2e-tests">Running E2E tests<a class="headerlink" href="#running-e2e-tests" title="Permanent link">&para;</a></h2>
 <p>The end-to-end tests need to run against a kubernetes cluster with the Argo Rollouts controller
-running. The rollout controller can be started with the command: </p>
+running. The rollout controller can be started with the command:</p>
 <div class="highlight"><pre><span></span><code>make start-e2e
 </code></pre></div>
 <p>Then run the e2e tests:</p>
@@ -1986,8 +1988,8 @@ running. The rollout controller can be started with the command: </p>
 <ol>
 <li>The e2e tests are designed to run as quickly as possible, eliminating readiness and termination
 delays. However, it is often desired to artificially slow down the tests for debugging purposes,
-as well as to understand what the test is doing. To delay startup and termination of pods, set the 
-<code>E2E_POD_DELAY</code> to an integer value in seconds. This environment variable is often coupled with 
+as well as to understand what the test is doing. To delay startup and termination of pods, set the
+<code>E2E_POD_DELAY</code> to an integer value in seconds. This environment variable is often coupled with
 <code>E2E_TEST_OPTIONS</code> to debug and slow down a specific test.</li>
 </ol>
 <div class="highlight"><pre><span></span><code>make test-e2e <span class="nv">E2E_POD_DELAY</span><span class="o">=</span><span class="m">10</span>
@@ -2030,12 +2032,12 @@ make test-e2e <span class="nv">E2E_INSTANCE_ID</span><span class="o">=</span>foo
 <div class="highlight"><pre><span></span><code>kubectl -n argo-rollouts apply -f manifests/install.yaml
 </code></pre></div>
 <h2 id="upgrading-kubernetes-libraries">Upgrading Kubernetes Libraries<a class="headerlink" href="#upgrading-kubernetes-libraries" title="Permanent link">&para;</a></h2>
-<p>Argo Rollouts has a dependency on the kubernetes/kubernetes repo for some of the functionality that has not been 
-pushed into the other kubernetes repositories yet. In order to import the kubernetes/kubernetes repo, all of the 
-associated repos have to pinned to the correct version specified by the kubernetes/kubernetes release. The 
+<p>Argo Rollouts has a dependency on the kubernetes/kubernetes repo for some of the functionality that has not been
+pushed into the other kubernetes repositories yet. In order to import the kubernetes/kubernetes repo, all of the
+associated repos have to pinned to the correct version specified by the kubernetes/kubernetes release. The
 <code>./hack/update-k8s-dependencies.sh</code> updates all the dependencies to the those correct versions.</p>
 <h2 id="documentation-changes">Documentation Changes<a class="headerlink" href="#documentation-changes" title="Permanent link">&para;</a></h2>
-<p>Modify contents in <code>docs/</code> directory. </p>
+<p>Modify contents in <code>docs/</code> directory.</p>
 <p>Preview changes in your browser by visiting http://localhost:8000 after running:</p>
 <div class="highlight"><pre><span></span><code>make serve-docs
 </code></pre></div>
@@ -2112,10 +2114,10 @@ associated repos have to pinned to the correct version specified by the kubernet
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      <script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
       
     
   </body>

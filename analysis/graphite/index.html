@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/getting-started/alb/">
+        <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/analysis/graphite/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.8">
     
     
       
-        <title>AWS ALB - Argo Rollouts - Kubernetes Progressive Delivery Controller</title>
+        <title>Graphite Metrics - Argo Rollouts - Kubernetes Progressive Delivery Controller</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started-aws-load-balancer-controller" class="md-skip">
+        <a href="#graphite-metrics" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AWS ALB
+              Graphite Metrics
             
           </span>
         </div>
@@ -263,14 +263,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         Getting Started
@@ -288,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         Basic Usage
       </a>
     </li>
@@ -300,7 +298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ambassador/" class="md-nav__link">
+      <a href="../../getting-started/ambassador/" class="md-nav__link">
         Ambassador
       </a>
     </li>
@@ -310,65 +308,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          AWS ALB
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../getting-started/alb/" class="md-nav__link">
         AWS ALB
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-deploy-the-rollout-services-and-ingress" class="md-nav__link">
-    1. Deploy the Rollout, Services, and Ingress
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-perform-an-update" class="md-nav__link">
-    2. Perform an update
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -378,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../istio/" class="md-nav__link">
+      <a href="../../getting-started/istio/" class="md-nav__link">
         Istio
       </a>
     </li>
@@ -390,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nginx/" class="md-nav__link">
+      <a href="../../getting-started/nginx/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -402,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../smi/" class="md-nav__link">
+      <a href="../../getting-started/smi/" class="md-nav__link">
         SMI
       </a>
     </li>
@@ -762,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/prometheus/" class="md-nav__link">
+      <a href="../prometheus/" class="md-nav__link">
         Prometheus
       </a>
     </li>
@@ -774,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/datadog/" class="md-nav__link">
+      <a href="../datadog/" class="md-nav__link">
         DataDog
       </a>
     </li>
@@ -786,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/newrelic/" class="md-nav__link">
+      <a href="../newrelic/" class="md-nav__link">
         NewRelic
       </a>
     </li>
@@ -798,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/wavefront/" class="md-nav__link">
+      <a href="../wavefront/" class="md-nav__link">
         Wavefront
       </a>
     </li>
@@ -810,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/job/" class="md-nav__link">
+      <a href="../job/" class="md-nav__link">
         Job
       </a>
     </li>
@@ -822,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/web/" class="md-nav__link">
+      <a href="../web/" class="md-nav__link">
         Web
       </a>
     </li>
@@ -834,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/kayenta/" class="md-nav__link">
+      <a href="../kayenta/" class="md-nav__link">
         Kayenta
       </a>
     </li>
@@ -846,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysis/cloudwatch/" class="md-nav__link">
+      <a href="../cloudwatch/" class="md-nav__link">
         CloudWatch
       </a>
     </li>
@@ -1668,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../getting-started/setup/" class="md-nav__link">
         Environment Setup
       </a>
     </li>
@@ -1757,35 +1701,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-deploy-the-rollout-services-and-ingress" class="md-nav__link">
-    1. Deploy the Rollout, Services, and Ingress
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-perform-an-update" class="md-nav__link">
-    2. Perform an update
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1796,122 +1711,43 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/argoproj/argo-rollouts/edit/master/docs/getting-started/alb/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/argoproj/argo-rollouts/edit/master/docs/analysis/graphite.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="getting-started-aws-load-balancer-controller">Getting Started - AWS Load Balancer Controller<a class="headerlink" href="#getting-started-aws-load-balancer-controller" title="Permanent link">&para;</a></h1>
-<p>This guide covers how Argo Rollouts integrates with the
-<a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/latest/">AWS Load Balancer Controller</a> 
-for traffic shaping. This guide builds upon the concepts of the <a href="../">basic getting started guide</a>.</p>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Kubernetes cluster with AWS ALB Ingress Controller installed</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>See the <a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/latest/deploy/installation/">Load Balancer Controller Installation instructions</a>
-on how to install the AWS Load Balancer Controller</p>
-</div>
-<h2 id="1-deploy-the-rollout-services-and-ingress">1. Deploy the Rollout, Services, and Ingress<a class="headerlink" href="#1-deploy-the-rollout-services-and-ingress" title="Permanent link">&para;</a></h2>
-<p>When an AWS ALB Ingress is used as the traffic router, the Rollout canary strategy must define the
-following fields:</p>
+                <h1 id="graphite-metrics">Graphite Metrics<a class="headerlink" href="#graphite-metrics" title="Permanent link">&para;</a></h1>
+<p>A <a href="https://graphiteapp.org/">Graphite</a> query can be used to obtain measurements for analysis.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Rollout</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AnalysisTemplate</span>
 <span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">success-rate</span>
 <span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">strategy</span><span class="p">:</span>
-    <span class="nt">canary</span><span class="p">:</span>
-      <span class="c1"># canaryService and stableService are references to Services which the Rollout will modify</span>
-      <span class="c1"># to target the canary ReplicaSet and stable ReplicaSet respectively (required).</span>
-      <span class="nt">canaryService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-canary</span>
-      <span class="nt">stableService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-stable</span>
-      <span class="nt">trafficRouting</span><span class="p">:</span>
-        <span class="nt">alb</span><span class="p">:</span>
-          <span class="c1"># The referenced ingress will be injected with a custom action annotation, directing</span>
-          <span class="c1"># the AWS Load Balancer Controller to split traffic between the canary and stable</span>
-          <span class="c1"># Service, according to the desired traffic weight (required).</span>
-          <span class="nt">ingress</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-ingress</span>
-          <span class="c1"># Reference to a Service that the Ingress must target in one of the rules (optional).</span>
-          <span class="c1"># If omitted, uses canary.stableService.</span>
-          <span class="nt">rootService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-root</span>
-          <span class="c1"># Service port is the port which the Service listens on (required).</span>
-          <span class="nt">servicePort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">443</span>
-<span class="nn">...</span>
+  <span class="nt">args</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">service-name</span>
+  <span class="nt">metrics</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">success-rate</span>
+    <span class="nt">interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5m</span>
+    <span class="c1"># Note that the Argo Rollouts Graphite metrics provider returns results as an array of float64s with 6 decimal places.</span>
+    <span class="nt">successCondition</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">results[0] &gt;= 90.000000</span>
+    <span class="nt">failureLimit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+    <span class="nt">provider</span><span class="p">:</span>
+      <span class="nt">graphite</span><span class="p">:</span>
+        <span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://graphite.example.com:9090</span>
+        <span class="nt">query</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+          <span class="no">target=summarize(</span>
+            <span class="no">asPercent(</span>
+              <span class="no">sumSeries(</span>
+                <span class="no">stats.timers.httpServerRequests.app.{{args.service-name}}.exception.*.method.*.outcome.{CLIENT_ERROR,INFORMATIONAL,REDIRECTION,SUCCESS}.status.*.uri.*.count</span>
+              <span class="no">),</span>
+              <span class="no">sumSeries(</span>
+                <span class="no">stats.timers.httpServerRequests.app.{{args.service-name}}.exception.*.method.*.outcome.*.status.*.uri.*.count</span>
+              <span class="no">)</span>
+            <span class="no">),</span>
+            <span class="no">&#39;5min&#39;,</span>
+            <span class="no">&#39;avg&#39;</span>
+          <span class="no">)</span>
 </code></pre></div>
-<p>The Ingress referenced by the Rollout must have a rule which matches one of Rollout services.
-This should be <code>canary.trafficRouting.alb.rootService</code> (if specified), otherwise the rollout will
-use <code>canary.stableService</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Ingress</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-ingress</span>
-  <span class="nt">annotations</span><span class="p">:</span>
-    <span class="nt">kubernetes.io/ingress.class</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">alb</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">rules</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">http</span><span class="p">:</span>
-      <span class="nt">paths</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/*</span>
-        <span class="nt">backend</span><span class="p">:</span>
-          <span class="c1"># serviceName must match either: canary.trafficRouting.alb.rootService (if specified),</span>
-          <span class="c1"># or canary.stableService (if rootService is omitted)</span>
-          <span class="nt">serviceName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo-root</span>
-          <span class="c1"># servicePort must be the value: use-annotation</span>
-          <span class="c1"># This instructs AWS Load Balancer Controller to look to annotations on how to direct traffic</span>
-          <span class="nt">servicePort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">use-annotation</span>
-</code></pre></div>
-<p>During an update, the Ingress will be injected with a
-<a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/latest/guide/ingress/annotations/#actions">custom action annotation</a>,
-which directs the ALB to splits traffic between the stable and canary Services referenced by the Rollout.
-In this example, those Services are named: <code>rollouts-demo-stable</code> and <code>rollouts-demo-canary</code> 
-respectively.</p>
-<p>Run the following commands to deploy:</p>
-<ul>
-<li>A Rollout</li>
-<li>Three Services (root, stable, canary)</li>
-<li>An Ingress</li>
-</ul>
-<div class="highlight"><pre><span></span><code>kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/alb/rollout.yaml
-kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/alb/services.yaml
-kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/alb/ingress.yaml
-</code></pre></div>
-<p>After applying the manifests you should see the following rollout, services, and ingress resources in the cluster:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl get ro
-NAME            DESIRED   CURRENT   UP-TO-DATE   AVAILABLE
-rollouts-demo   <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>            <span class="m">1</span>
-
-$ kubectl get svc
-NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT<span class="o">(</span>S<span class="o">)</span>        AGE
-rollouts-demo-root     NodePort    <span class="m">10</span>.100.16.123    &lt;none&gt;        <span class="m">80</span>:30225/TCP   2m43s
-rollouts-demo-canary   NodePort    <span class="m">10</span>.100.16.64     &lt;none&gt;        <span class="m">80</span>:30224/TCP   2m43s
-rollouts-demo-stable   NodePort    <span class="m">10</span>.100.146.232   &lt;none&gt;        <span class="m">80</span>:31135/TCP   2m43s
-
-$ kubectl get ingress
-NAME                    HOSTS   ADDRESS                                                                       PORTS   AGE
-rollouts-demo-ingress   *       b0548428-default-rolloutsd-6951-1972570952.ap-northeast-1.elb.amazonaws.com   <span class="m">80</span>      6m36s
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl argo rollouts get rollout rollouts-demo
-</code></pre></div>
-<p><img alt="Rollout ALB" src="rollout-alb.png" /></p>
-<h2 id="2-perform-an-update">2. Perform an update<a class="headerlink" href="#2-perform-an-update" title="Permanent link">&para;</a></h2>
-<p>Update the rollout by changing the image, and wait for it to reach the paused state.</p>
-<div class="highlight"><pre><span></span><code>kubectl argo rollouts <span class="nb">set</span> image rollouts-demo rollouts-demo<span class="o">=</span>argoproj/rollouts-demo:yellow
-kubectl argo rollouts get rollout rollouts-demo
-</code></pre></div>
-<p><img alt="Rollout ALB Paused" src="paused-rollout-alb.png" /></p>
-<p>At this point, both the canary and stable version of the Rollout are running, with 5% of the
-traffic directed to the canary. To understand how this works, inspect the listener rules for 
-the ALB. When looking at the listener rules, we see that the forward action weights 
-have been modified by the controller to reflect the current weight of the canary.</p>
-<p><img alt="ALB Listener_Rules" src="alb-listener-rules.png" /></p>
-<p>The controller has added <code>rollouts-pod-template-hash</code> selector to the Services and 
-attached the same label to the Pods. Therefore, you can split the traffic by simply 
-forwarding the requests to the Services according to the weights.</p>
-<p>As the Rollout progresses through steps, the forward action weights will be adjusted to
-match the current setWeight of the steps.</p>
                 
               
               
@@ -1927,41 +1763,6 @@ match the current setWeight of the steps.</p>
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../ambassador/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ambassador" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Ambassador
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../istio/" class="md-footer__link md-footer__link--next" aria-label="Next: Istio" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Istio
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
