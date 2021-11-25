@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/architecture/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.1">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1c75ef36.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -274,6 +274,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1991,6 +1993,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -2090,7 +2094,7 @@ fields that control the stages, thresholds and methods of advanced deployment me
 <h2 id="ingressservice">Ingress/Service<a class="headerlink" href="#ingressservice" title="Permanent link">&para;</a></h2>
 <p>This is the mechanism that traffic from live users enters your cluster and is redirected to the appropriate version. Argo Rollouts use the <a href="https://kubernetes.io/docs/concepts/services-networking/service/">standard Kubernetes service resource</a>, but with some extra metadata needed for management.</p>
 <p>Argo Rollouts is very flexible on networking options. First of all you can have different services during a Rollout, that go only to the new version, only to the old version or both.
-Specifically for Canary deployments, Argo Rollouts supports several <a href="../features/traffic-management/">service mesh and ingress solutions</a> for splitting traffic with specific percentages instead of simple balancing based on pod counts.</p>
+Specifically for Canary deployments, Argo Rollouts supports several <a href="../features/traffic-management/">service mesh and ingress solutions</a> for splitting traffic with specific percentages instead of simple balancing based on pod counts and it is possible to use multiple routing providers simultaneously.</p>
 <h2 id="analysistemplate-and-analysisrun">AnalysisTemplate and AnalysisRun<a class="headerlink" href="#analysistemplate-and-analysisrun" title="Permanent link">&para;</a></h2>
 <p>Analysis is the capability to connect a Rollout to your metrics provider and define specific thresholds for certain metrics that will decide if an update is successful or not. For each analysis you can define one or more metric queries along with their expected results. A Rollout will progress on its own if metric queries are good, rollback automatically if metrics show failure and pause the rollout if metrics cannot provide a success/failure answer.</p>
 <p>For performing an analysis, Argo Rollouts includes two custom Kubernetes resources: <code>AnalysisTemplate</code> and <code>AnalysisRun</code>.</p>
@@ -2173,10 +2177,10 @@ Specifically for Canary deployments, Argo Rollouts supports several <a href="../
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.e99e714c.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c7d1b464.min.js"></script>
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
