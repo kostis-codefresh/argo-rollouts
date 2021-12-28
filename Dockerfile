@@ -63,7 +63,7 @@ RUN touch ui/dist/node_modules.marker && \
     touch ui/dist/app/index.html && \
     find ui/dist
 
-ARG MAKE_TARGET="controller plugin-linux plugin-darwin plugin-windows"
+ARG MAKE_TARGET="controller plugin-linux plugin-darwin plugin-windows plugin-linux-arm64"
 RUN make ${MAKE_TARGET}
 
 ####################################################################################################

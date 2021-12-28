@@ -202,6 +202,11 @@ plugin-windows: ui/dist
 	cp -r ui/dist/app/* server/static
 	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -v -i -ldflags '${LDFLAGS}' -o ${DIST_DIR}/${PLUGIN_CLI_NAME}-windows-amd64 ./cmd/kubectl-argo-rollouts
 
+.PHONY: plugin-linux-arm64
+plugin-linux: ui/dist
+	cp -r ui/dist/app/* server/static
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -v -i -ldflags '${LDFLAGS}' -o ${DIST_DIR}/${PLUGIN_CLI_NAME}-linux-arm64 ./cmd/kubectl-argo-rollouts
+
 .PHONY: docs
 docs:
 	go run ./hack/gen-docs/main.go
