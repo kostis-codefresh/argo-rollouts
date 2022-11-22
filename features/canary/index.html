@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/features/canary/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -44,6 +44,18 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-5Z1VTPDL73"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-5Z1VTPDL73",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-5Z1VTPDL73",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -113,6 +125,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,6 +133,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -2314,10 +2328,10 @@
 <p>A canary rollout is a deployment strategy where the operator releases a new version of their application to a small percentage of the production traffic. </p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Since there is no agreed upon standard for a canary deployment, the rollouts controller allows users to outline how they want to run their canary deployment. Users can define a list of steps the controller uses to manipulate the ReplicaSets when there is a change to the <code>.spec.template</code>. Each step will be evaluated before the new ReplicaSet is promoted to the stable version, and the old version is completely scaled down.</p>
-<p>Each step can have one of two fields. The <code>setWeight</code> field dictates the percentage of traffic that should be sent to the canary, and the <code>pause</code> struct instructs the rollout to pause.  When the controller reaches a <code>pause</code> step for a rollout, it will set adds a PauseCondition struct to the <code>.status.PauseConditions</code> field. If the <code>duration</code> field within the <code>pause</code> struct is set, the rollout will not progress to the next step until it has waited for the value of the <code>duration</code> field. Otherwise, the rollout will wait indefinitely until that Pause condition is removed. By using the <code>setWeight</code> and the <code>pause</code> fields, a user can declarative describe how they want to progress to the new version. Below is an example of a canary strategy.</p>
+<p>Each step can have one of two fields. The <code>setWeight</code> field dictates the percentage of traffic that should be sent to the canary, and the <code>pause</code> struct instructs the rollout to pause.  When the controller reaches a <code>pause</code> step for a rollout, it will add a <code>PauseCondition</code> struct to the <code>.status.PauseConditions</code> field. If the <code>duration</code> field within the <code>pause</code> struct is set, the rollout will not progress to the next step until it has waited for the value of the <code>duration</code> field. Otherwise, the rollout will wait indefinitely until that Pause condition is removed. By using the <code>setWeight</code> and the <code>pause</code> fields, a user can declaratively describe how they want to progress to the new version. Below is an example of a canary strategy.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>If the canary Rollout does not use <a href="../traffic-management/">traffic management</a>, the Rollout makes a best effort attempt to achieve the percentage listed in the last <code>setWeight</code> step between the new and old version. For example, if a Rollout has 10 Replicas and 10% for the first <code>setWeight</code> step, the controller will scale the new desired ReplicaSet to 1 replicas and the old stable ReplicaSet to 9. In the case where the setWeight is 15%, the Rollout attempts to get there by rounding up the calculation (i.e. the new ReplicaSet has 2 pods since 15% of 10, rounds up to 2 and the old ReplicaSet has 9 pods since 85% of 10, rounds up to 9). If a user wants to have more fine-grained control of the percentages without a large number of Replicas, that user should use the  <a href="#trafficrouting">traffic management</a> functionality.</p>
+<p>If the canary Rollout does not use <a href="../traffic-management/">traffic management</a>, the Rollout makes a best effort attempt to achieve the percentage listed in the last <code>setWeight</code> step between the new and old version. For example, if a Rollout has 10 Replicas and 10% for the first <code>setWeight</code> step, the controller will scale the new desired ReplicaSet to 1 replicas and the old stable ReplicaSet to 9. In the case where the setWeight is 15%, the Rollout attempts to get there by rounding up the calculation (i.e. the new ReplicaSet has 2 pods since 15% of 10 rounds up to 2 and the old ReplicaSet has 9 pods since 85% of 10 rounds up to 9). If a user wants to have more fine-grained control of the percentages without a large number of Replicas, that user should use the  <a href="#trafficrouting">traffic management</a> functionality.</p>
 </div>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
@@ -2491,6 +2505,8 @@ scaled up while aborting, an explicit value for <code>abortScaleDownDelaySeconds
 <p>Defaults to nil</p>
 
 
+  
+
 
 
 
@@ -2562,10 +2578,10 @@ scaled up while aborting, an explicit value for <code>abortScaleDownDelaySeconds
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="../../assets/versions.js"></script>
       
