@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -23,10 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -810,6 +810,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../features/traffic-management/google-cloud/" class="md-nav__link">
+        Google Cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../features/traffic-management/istio/" class="md-nav__link">
         Istio
       </a>
@@ -958,7 +972,7 @@
   
     <li class="md-nav__item">
       <a href="../analysis/datadog/" class="md-nav__link">
-        DataDog
+        Datadog
       </a>
     </li>
   
@@ -2426,8 +2440,10 @@
 <p>Argo Rollouts plugins depend on hashicorp's <a href="https://github.com/hashicorp/go-plugin">go-plugin</a> library. This library
 provides a way for a plugin to be compiled as a standalone executable and then loaded by the rollouts controller at runtime.
 This works by having the plugin executable act as a rpc server and the rollouts controller act as a client. The plugin executable
-is started by the rollouts controller and is a long-lived process and that the rollouts controller connects to over a unix socket.
-The communication protocol uses golang built in net/rpc library so plugins have to be written in golang.</p>
+is started by the rollouts controller and is a long-lived process and that the rollouts controller connects to over a unix socket.</p>
+<p>Here is an overview of how plugins are loaded:</p>
+<p><a href="../contributing-assets/plugin-loading.png"><img alt="Loading of plugins" src="../contributing-assets/plugin-loading.png" /></a></p>
+<p>The communication protocol uses golang built in net/rpc library so plugins have to be written in golang.</p>
 <h2 id="plugin-repository">Plugin Repository<a class="headerlink" href="#plugin-repository" title="Permanent link">&para;</a></h2>
 <p>In order to get plugins listed in the main argo rollouts documentation we ask that the plugin repository be created under
 the <a href="https://github.com/argoproj-labs">argoproj-labs</a> organization. Please open an issue under argo-rollouts requesting a
