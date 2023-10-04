@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.d451bc0e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.79e020e9.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.a5377069.min.css">
@@ -2879,6 +2879,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#can-we-install-argo-rollouts-centrally-in-a-cluster-and-manage-rollout-resources-in-external-clusters" class="md-nav__link">
+    Can we install Argo Rollouts centrally in a cluster and manage Rollout resources in external clusters?
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3393,6 +3400,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#can-we-install-argo-rollouts-centrally-in-a-cluster-and-manage-rollout-resources-in-external-clusters" class="md-nav__link">
+    Can we install Argo Rollouts centrally in a cluster and manage Rollout resources in external clusters?
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3587,6 +3601,8 @@ by a Git commit, an API call, another controller or even a manual <code>kubectl<
 solution that does not follow the GitOps approach.</p>
 <h3 id="can-we-run-the-argo-rollouts-controller-in-ha-mode">Can we run the Argo Rollouts controller in HA mode?<a class="headerlink" href="#can-we-run-the-argo-rollouts-controller-in-ha-mode" title="Permanent link">&para;</a></h3>
 <p>Yes. A k8s cluster can run multiple replicas of Argo-rollouts controllers to achieve HA. To enable this feature, run the controller with <code>--leader-elect</code> flag and increase the number of replicas in the controller's deployment manifest. The implementation is based on the <a href="https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#section-documentation">k8s client-go's leaderelection package</a>. This implementation is tolerant to <em>arbitrary clock skew</em> among replicas. The level of tolerance to skew rate can be configured by setting <code>--leader-election-lease-duration</code> and <code>--leader-election-renew-deadline</code> appropriately. Please refer to the <a href="https://pkg.go.dev/k8s.io/client-go/tools/leaderelection#pkg-overview">package documentation</a> for details.</p>
+<h3 id="can-we-install-argo-rollouts-centrally-in-a-cluster-and-manage-rollout-resources-in-external-clusters">Can we install Argo Rollouts centrally in a cluster and manage Rollout resources in external clusters?<a class="headerlink" href="#can-we-install-argo-rollouts-centrally-in-a-cluster-and-manage-rollout-resources-in-external-clusters" title="Permanent link">&para;</a></h3>
+<p>No you cannot do that (even though Argo CD can work that way). This is by design because the Rollout is a custom resource unknown to vanilla Kubernetes. You need the Rollout CRD as well as the controller in the deployment cluster (every cluster that will use workloads with Rollouts).</p>
 <h2 id="rollouts">Rollouts<a class="headerlink" href="#rollouts" title="Permanent link">&para;</a></h2>
 <h3 id="which-deployment-strategies-does-argo-rollouts-support">Which deployment strategies does Argo Rollouts support?<a class="headerlink" href="#which-deployment-strategies-does-argo-rollouts-support" title="Permanent link">&para;</a></h3>
 <p>Argo Rollouts supports BlueGreen, Canary, and Rolling Update. Additionally, Progressive Delivery features can be enabled on top of the blue-green/canary update, which further provides advanced deployment such as automated analysis and rollback.</p>
@@ -3672,10 +3688,11 @@ are deploying. Ideally you should also make your services backwards and forwards
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+    
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.726fbb30.min.js"></script>
+      <script src="../assets/javascripts/bundle.6eac0284.min.js"></script>
       
         <script src="../assets/versions.js"></script>
       
