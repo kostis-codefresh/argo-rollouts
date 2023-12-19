@@ -244,18 +244,30 @@
                                             "datadog": {
                                                 "properties": {
                                                     "apiVersion": {
+                                                        "default": "v1",
+                                                        "enum": [
+                                                            "v1",
+                                                            "v2"
+                                                        ],
+                                                        "type": "string"
+                                                    },
+                                                    "formula": {
                                                         "type": "string"
                                                     },
                                                     "interval": {
+                                                        "default": "5m",
                                                         "type": "string"
+                                                    },
+                                                    "queries": {
+                                                        "additionalProperties": {
+                                                            "type": "string"
+                                                        },
+                                                        "type": "object"
                                                     },
                                                     "query": {
                                                         "type": "string"
                                                     }
                                                 },
-                                                "required": [
-                                                    "query"
-                                                ],
                                                 "type": "object"
                                             },
                                             "graphite": {
@@ -375,8 +387,7 @@
                                                                                 }
                                                                             },
                                                                             "required": [
-                                                                                "action",
-                                                                                "onPodConditions"
+                                                                                "action"
                                                                             ],
                                                                             "type": "object"
                                                                         },
@@ -1620,6 +1631,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -2570,6 +2599,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -3530,6 +3577,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -3889,6 +3954,35 @@
                                                                                 },
                                                                                 "type": "array"
                                                                             },
+                                                                            "resourceClaims": {
+                                                                                "items": {
+                                                                                    "properties": {
+                                                                                        "name": {
+                                                                                            "type": "string"
+                                                                                        },
+                                                                                        "source": {
+                                                                                            "properties": {
+                                                                                                "resourceClaimName": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "resourceClaimTemplateName": {
+                                                                                                    "type": "string"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "object"
+                                                                                        }
+                                                                                    },
+                                                                                    "required": [
+                                                                                        "name"
+                                                                                    ],
+                                                                                    "type": "object"
+                                                                                },
+                                                                                "type": "array",
+                                                                                "x-kubernetes-list-map-keys": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "x-kubernetes-list-type": "map"
+                                                                            },
                                                                             "restartPolicy": {
                                                                                 "type": "string"
                                                                             },
@@ -3897,6 +3991,24 @@
                                                                             },
                                                                             "schedulerName": {
                                                                                 "type": "string"
+                                                                            },
+                                                                            "schedulingGates": {
+                                                                                "items": {
+                                                                                    "properties": {
+                                                                                        "name": {
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "required": [
+                                                                                        "name"
+                                                                                    ],
+                                                                                    "type": "object"
+                                                                                },
+                                                                                "type": "array",
+                                                                                "x-kubernetes-list-map-keys": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "x-kubernetes-list-type": "map"
                                                                             },
                                                                             "securityContext": {
                                                                                 "properties": {
@@ -4293,6 +4405,26 @@
                                                     },
                                                     "authentication": {
                                                         "properties": {
+                                                            "oauth2": {
+                                                                "properties": {
+                                                                    "clientId": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "clientSecret": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "scopes": {
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": "array"
+                                                                    },
+                                                                    "tokenUrl": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
                                                             "sigv4": {
                                                                 "properties": {
                                                                     "profile": {
@@ -4368,6 +4500,45 @@
                                             },
                                             "web": {
                                                 "properties": {
+                                                    "authentication": {
+                                                        "properties": {
+                                                            "oauth2": {
+                                                                "properties": {
+                                                                    "clientId": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "clientSecret": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "scopes": {
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": "array"
+                                                                    },
+                                                                    "tokenUrl": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "sigv4": {
+                                                                "properties": {
+                                                                    "profile": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "region": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "roleArn": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
                                                     "body": {
                                                         "type": "string"
                                                     },
@@ -4691,18 +4862,30 @@
                                             "datadog": {
                                                 "properties": {
                                                     "apiVersion": {
+                                                        "default": "v1",
+                                                        "enum": [
+                                                            "v1",
+                                                            "v2"
+                                                        ],
+                                                        "type": "string"
+                                                    },
+                                                    "formula": {
                                                         "type": "string"
                                                     },
                                                     "interval": {
+                                                        "default": "5m",
                                                         "type": "string"
+                                                    },
+                                                    "queries": {
+                                                        "additionalProperties": {
+                                                            "type": "string"
+                                                        },
+                                                        "type": "object"
                                                     },
                                                     "query": {
                                                         "type": "string"
                                                     }
                                                 },
-                                                "required": [
-                                                    "query"
-                                                ],
                                                 "type": "object"
                                             },
                                             "graphite": {
@@ -4822,8 +5005,7 @@
                                                                                 }
                                                                             },
                                                                             "required": [
-                                                                                "action",
-                                                                                "onPodConditions"
+                                                                                "action"
                                                                             ],
                                                                             "type": "object"
                                                                         },
@@ -6067,6 +6249,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -7017,6 +7217,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -7977,6 +8195,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -8336,6 +8572,35 @@
                                                                                 },
                                                                                 "type": "array"
                                                                             },
+                                                                            "resourceClaims": {
+                                                                                "items": {
+                                                                                    "properties": {
+                                                                                        "name": {
+                                                                                            "type": "string"
+                                                                                        },
+                                                                                        "source": {
+                                                                                            "properties": {
+                                                                                                "resourceClaimName": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "resourceClaimTemplateName": {
+                                                                                                    "type": "string"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "object"
+                                                                                        }
+                                                                                    },
+                                                                                    "required": [
+                                                                                        "name"
+                                                                                    ],
+                                                                                    "type": "object"
+                                                                                },
+                                                                                "type": "array",
+                                                                                "x-kubernetes-list-map-keys": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "x-kubernetes-list-type": "map"
+                                                                            },
                                                                             "restartPolicy": {
                                                                                 "type": "string"
                                                                             },
@@ -8344,6 +8609,24 @@
                                                                             },
                                                                             "schedulerName": {
                                                                                 "type": "string"
+                                                                            },
+                                                                            "schedulingGates": {
+                                                                                "items": {
+                                                                                    "properties": {
+                                                                                        "name": {
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "required": [
+                                                                                        "name"
+                                                                                    ],
+                                                                                    "type": "object"
+                                                                                },
+                                                                                "type": "array",
+                                                                                "x-kubernetes-list-map-keys": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "x-kubernetes-list-type": "map"
                                                                             },
                                                                             "securityContext": {
                                                                                 "properties": {
@@ -8740,6 +9023,26 @@
                                                     },
                                                     "authentication": {
                                                         "properties": {
+                                                            "oauth2": {
+                                                                "properties": {
+                                                                    "clientId": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "clientSecret": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "scopes": {
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": "array"
+                                                                    },
+                                                                    "tokenUrl": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
                                                             "sigv4": {
                                                                 "properties": {
                                                                     "profile": {
@@ -8815,6 +9118,45 @@
                                             },
                                             "web": {
                                                 "properties": {
+                                                    "authentication": {
+                                                        "properties": {
+                                                            "oauth2": {
+                                                                "properties": {
+                                                                    "clientId": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "clientSecret": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "scopes": {
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": "array"
+                                                                    },
+                                                                    "tokenUrl": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "sigv4": {
+                                                                "properties": {
+                                                                    "profile": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "region": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "roleArn": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
                                                     "body": {
                                                         "type": "string"
                                                     },
@@ -9138,18 +9480,30 @@
                                             "datadog": {
                                                 "properties": {
                                                     "apiVersion": {
+                                                        "default": "v1",
+                                                        "enum": [
+                                                            "v1",
+                                                            "v2"
+                                                        ],
+                                                        "type": "string"
+                                                    },
+                                                    "formula": {
                                                         "type": "string"
                                                     },
                                                     "interval": {
+                                                        "default": "5m",
                                                         "type": "string"
+                                                    },
+                                                    "queries": {
+                                                        "additionalProperties": {
+                                                            "type": "string"
+                                                        },
+                                                        "type": "object"
                                                     },
                                                     "query": {
                                                         "type": "string"
                                                     }
                                                 },
-                                                "required": [
-                                                    "query"
-                                                ],
                                                 "type": "object"
                                             },
                                             "graphite": {
@@ -9269,8 +9623,7 @@
                                                                                 }
                                                                             },
                                                                             "required": [
-                                                                                "action",
-                                                                                "onPodConditions"
+                                                                                "action"
                                                                             ],
                                                                             "type": "object"
                                                                         },
@@ -10514,6 +10867,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -11464,6 +11835,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -12424,6 +12813,24 @@
                                                                                         },
                                                                                         "resources": {
                                                                                             "properties": {
+                                                                                                "claims": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "name": {
+                                                                                                                "type": "string"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "required": [
+                                                                                                            "name"
+                                                                                                        ],
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array",
+                                                                                                    "x-kubernetes-list-map-keys": [
+                                                                                                        "name"
+                                                                                                    ],
+                                                                                                    "x-kubernetes-list-type": "map"
+                                                                                                },
                                                                                                 "limits": {
                                                                                                     "x-kubernetes-preserve-unknown-fields": true
                                                                                                 },
@@ -12783,6 +13190,35 @@
                                                                                 },
                                                                                 "type": "array"
                                                                             },
+                                                                            "resourceClaims": {
+                                                                                "items": {
+                                                                                    "properties": {
+                                                                                        "name": {
+                                                                                            "type": "string"
+                                                                                        },
+                                                                                        "source": {
+                                                                                            "properties": {
+                                                                                                "resourceClaimName": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "resourceClaimTemplateName": {
+                                                                                                    "type": "string"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "object"
+                                                                                        }
+                                                                                    },
+                                                                                    "required": [
+                                                                                        "name"
+                                                                                    ],
+                                                                                    "type": "object"
+                                                                                },
+                                                                                "type": "array",
+                                                                                "x-kubernetes-list-map-keys": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "x-kubernetes-list-type": "map"
+                                                                            },
                                                                             "restartPolicy": {
                                                                                 "type": "string"
                                                                             },
@@ -12791,6 +13227,24 @@
                                                                             },
                                                                             "schedulerName": {
                                                                                 "type": "string"
+                                                                            },
+                                                                            "schedulingGates": {
+                                                                                "items": {
+                                                                                    "properties": {
+                                                                                        "name": {
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    },
+                                                                                    "required": [
+                                                                                        "name"
+                                                                                    ],
+                                                                                    "type": "object"
+                                                                                },
+                                                                                "type": "array",
+                                                                                "x-kubernetes-list-map-keys": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "x-kubernetes-list-type": "map"
                                                                             },
                                                                             "securityContext": {
                                                                                 "properties": {
@@ -13187,6 +13641,26 @@
                                                     },
                                                     "authentication": {
                                                         "properties": {
+                                                            "oauth2": {
+                                                                "properties": {
+                                                                    "clientId": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "clientSecret": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "scopes": {
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": "array"
+                                                                    },
+                                                                    "tokenUrl": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
                                                             "sigv4": {
                                                                 "properties": {
                                                                     "profile": {
@@ -13262,6 +13736,45 @@
                                             },
                                             "web": {
                                                 "properties": {
+                                                    "authentication": {
+                                                        "properties": {
+                                                            "oauth2": {
+                                                                "properties": {
+                                                                    "clientId": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "clientSecret": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "scopes": {
+                                                                        "items": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": "array"
+                                                                    },
+                                                                    "tokenUrl": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "sigv4": {
+                                                                "properties": {
+                                                                    "profile": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "region": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "roleArn": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
                                                     "body": {
                                                         "type": "string"
                                                     },
@@ -14706,6 +15219,24 @@
                                                                 },
                                                                 "resources": {
                                                                     "properties": {
+                                                                        "claims": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "name": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "required": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array",
+                                                                            "x-kubernetes-list-map-keys": [
+                                                                                "name"
+                                                                            ],
+                                                                            "x-kubernetes-list-type": "map"
+                                                                        },
                                                                         "limits": {
                                                                             "x-kubernetes-preserve-unknown-fields": true
                                                                         },
@@ -15656,6 +16187,24 @@
                                                                 },
                                                                 "resources": {
                                                                     "properties": {
+                                                                        "claims": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "name": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "required": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array",
+                                                                            "x-kubernetes-list-map-keys": [
+                                                                                "name"
+                                                                            ],
+                                                                            "x-kubernetes-list-type": "map"
+                                                                        },
                                                                         "limits": {
                                                                             "x-kubernetes-preserve-unknown-fields": true
                                                                         },
@@ -16616,6 +17165,24 @@
                                                                 },
                                                                 "resources": {
                                                                     "properties": {
+                                                                        "claims": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "name": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "required": [
+                                                                                    "name"
+                                                                                ],
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array",
+                                                                            "x-kubernetes-list-map-keys": [
+                                                                                "name"
+                                                                            ],
+                                                                            "x-kubernetes-list-type": "map"
+                                                                        },
                                                                         "limits": {
                                                                             "x-kubernetes-preserve-unknown-fields": true
                                                                         },
@@ -16975,6 +17542,35 @@
                                                         },
                                                         "type": "array"
                                                     },
+                                                    "resourceClaims": {
+                                                        "items": {
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "source": {
+                                                                    "properties": {
+                                                                        "resourceClaimName": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "resourceClaimTemplateName": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "name"
+                                                            ],
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array",
+                                                        "x-kubernetes-list-map-keys": [
+                                                            "name"
+                                                        ],
+                                                        "x-kubernetes-list-type": "map"
+                                                    },
                                                     "restartPolicy": {
                                                         "type": "string"
                                                     },
@@ -16983,6 +17579,24 @@
                                                     },
                                                     "schedulerName": {
                                                         "type": "string"
+                                                    },
+                                                    "schedulingGates": {
+                                                        "items": {
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "name"
+                                                            ],
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array",
+                                                        "x-kubernetes-list-map-keys": [
+                                                            "name"
+                                                        ],
+                                                        "x-kubernetes-list-type": "map"
                                                     },
                                                     "securityContext": {
                                                         "properties": {
@@ -18171,6 +18785,24 @@
                                                     },
                                                     "resources": {
                                                         "properties": {
+                                                            "claims": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "name": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "name"
+                                                                    ],
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array",
+                                                                "x-kubernetes-list-map-keys": [
+                                                                    "name"
+                                                                ],
+                                                                "x-kubernetes-list-type": "map"
+                                                            },
                                                             "limits": {
                                                                 "x-kubernetes-preserve-unknown-fields": true
                                                             },
@@ -19086,6 +19718,24 @@
                                                     },
                                                     "resources": {
                                                         "properties": {
+                                                            "claims": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "name": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "name"
+                                                                    ],
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array",
+                                                                "x-kubernetes-list-map-keys": [
+                                                                    "name"
+                                                                ],
+                                                                "x-kubernetes-list-type": "map"
+                                                            },
                                                             "limits": {
                                                                 "x-kubernetes-preserve-unknown-fields": true
                                                             },
@@ -20037,6 +20687,24 @@
                                                     },
                                                     "resources": {
                                                         "properties": {
+                                                            "claims": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "name": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "name"
+                                                                    ],
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array",
+                                                                "x-kubernetes-list-map-keys": [
+                                                                    "name"
+                                                                ],
+                                                                "x-kubernetes-list-type": "map"
+                                                            },
                                                             "limits": {
                                                                 "x-kubernetes-preserve-unknown-fields": true
                                                             },
@@ -20335,6 +21003,64 @@
                                                 "type": "object"
                                             },
                                             "type": "array",
+                                            "x-kubernetes-patch-merge-key": "name",
+                                            "x-kubernetes-patch-strategy": "merge"
+                                        },
+                                        "nodeSelector": {
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            },
+                                            "type": "object",
+                                            "x-kubernetes-map-type": "atomic"
+                                        },
+                                        "resourceClaims": {
+                                            "items": {
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "source": {
+                                                        "properties": {
+                                                            "resourceClaimName": {
+                                                                "type": "string"
+                                                            },
+                                                            "resourceClaimTemplateName": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "name"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array",
+                                            "x-kubernetes-list-map-keys": [
+                                                "name"
+                                            ],
+                                            "x-kubernetes-list-type": "map",
+                                            "x-kubernetes-patch-merge-key": "name",
+                                            "x-kubernetes-patch-strategy": "merge,retainKeys"
+                                        },
+                                        "schedulingGates": {
+                                            "items": {
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "name"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array",
+                                            "x-kubernetes-list-map-keys": [
+                                                "name"
+                                            ],
+                                            "x-kubernetes-list-type": "map",
                                             "x-kubernetes-patch-merge-key": "name",
                                             "x-kubernetes-patch-strategy": "merge"
                                         },
