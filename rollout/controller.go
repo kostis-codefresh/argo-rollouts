@@ -176,7 +176,12 @@ func NewController(cfg ControllerConfig) *Controller {
 	podRestarter := RolloutPodRestarter{
 		client:       cfg.KubeClientSet,
 		resyncPeriod: cfg.ResyncPeriod,
-		enqueueAfter: func(obj any, duration time.Duration) {
+		enqueueAfter: func(obj any{}, duration time.Duration) {
+			ro := unstructuredutil.ObjectToRollout(obj)
+			if ro != nil {
+				logCtx := logutil.WithRollout(ro)
+				logCtx.Info("rollout enqueue due to pod restart")
+			}
 			controllerutil.EnqueueAfter(obj, duration, cfg.RolloutWorkQueue)
 		},
 	}
