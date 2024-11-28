@@ -14,11 +14,11 @@
         <link rel="prev" href="../canary/">
       
       
-        <link rel="next" href="../hpa-support/">
+        <link rel="next" href="../canary/plugins/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -50,7 +50,7 @@
     
       <link rel="stylesheet" href="../../assets/versions.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -59,7 +59,7 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-5Z1VTPDL73"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-5Z1VTPDL73",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-5Z1VTPDL73",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-5Z1VTPDL73"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-5Z1VTPDL73",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-5Z1VTPDL73",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -109,7 +109,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -137,7 +137,7 @@
     <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
       </label>
     
   
@@ -147,7 +147,7 @@
     <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
       </label>
     
   
@@ -155,13 +155,13 @@
       
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -170,15 +170,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -201,7 +201,7 @@
         <a href="https://github.com/argoproj/argo-rollouts" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -246,7 +246,7 @@
       <a href="https://github.com/argoproj/argo-rollouts" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -753,6 +753,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../canary/plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Canary Step Plugin
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3058,26 +3079,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../roadmap/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Roadmap/Release Schedule
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -3086,10 +3087,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
         
           
-          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3100,8 +3101,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_18">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -3325,7 +3326,7 @@
 <span class="w">    </span><span class="c1"># limits the number of successful analysis runs and experiments to be stored in a history</span>
 <span class="w">    </span><span class="c1"># Defaults to 5.</span>
 <span class="w">    </span><span class="nt">successfulRunHistoryLimit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<span class="w">    </span><span class="c1"># limits the number of unsuccessful analysis runs and experiments to be stored in a history. </span>
+<span class="w">    </span><span class="c1"># limits the number of unsuccessful analysis runs and experiments to be stored in a history.</span>
 <span class="w">    </span><span class="c1"># Stages for unsuccessful: &quot;Error&quot;, &quot;Failed&quot;, &quot;Inconclusive&quot;</span>
 <span class="w">    </span><span class="c1"># Defaults to 5.</span>
 <span class="w">    </span><span class="nt">unsuccessfulRunHistoryLimit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
@@ -3337,9 +3338,9 @@
 <span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook</span>
 
-<span class="w">  </span><span class="c1"># WorkloadRef holds a references to a workload that provides Pod template </span>
+<span class="w">  </span><span class="c1"># WorkloadRef holds a references to a workload that provides Pod template</span>
 <span class="w">  </span><span class="c1"># (e.g. Deployment). If used, then do not use Rollout template property.</span>
-<span class="w">  </span><span class="nt">workloadRef</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">workloadRef</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
 <span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-ref-deployment</span>
@@ -3352,12 +3353,12 @@
 <span class="w">    </span><span class="nt">scaleDown</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">never|onsuccess|progressively</span>
 
 <span class="w">  </span><span class="c1"># Template describes the pods that will be created. Same as deployment.</span>
-<span class="w">  </span><span class="c1"># If used, then do not use Rollout workloadRef property. </span>
+<span class="w">  </span><span class="c1"># If used, then do not use Rollout workloadRef property.</span>
 <span class="w">  </span><span class="nt">template</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook</span>
-<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj/rollouts-demo:blue</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook</span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj/rollouts-demo:blue</span>
 
 <span class="w">  </span><span class="c1"># Minimum number of seconds for which a newly created pod should be ready</span>
 <span class="w">  </span><span class="c1"># without any of its container crashing, for it to be considered available.</span>
@@ -3393,7 +3394,7 @@
 <span class="w">  </span><span class="c1"># its pods. Used by the `kubectl argo rollouts restart ROLLOUT` command.</span>
 <span class="w">  </span><span class="c1"># The controller will ensure all pods have a creationTimestamp greater</span>
 <span class="w">  </span><span class="c1"># than or equal to this value.</span>
-<span class="w">  </span><span class="nt">restartAt</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2020-03-30T21:19:35Z&quot;</span>
+<span class="w">  </span><span class="nt">restartAt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2020-03-30T21:19:35Z&#39;</span>
 
 <span class="w">  </span><span class="c1"># The rollback window provides a way to fast track deployments to</span>
 <span class="w">  </span><span class="c1"># previously deployed versions.</span>
@@ -3402,10 +3403,8 @@
 <span class="w">    </span><span class="nt">revisions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
 <span class="w">  </span><span class="nt">strategy</span><span class="p">:</span>
-
 <span class="w">    </span><span class="c1"># Blue-green update strategy</span>
 <span class="w">    </span><span class="nt">blueGreen</span><span class="p">:</span>
-
 <span class="w">      </span><span class="c1"># Reference to service that the rollout modifies as the active service.</span>
 <span class="w">      </span><span class="c1"># Required.</span>
 <span class="w">      </span><span class="nt">activeService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">active-service</span>
@@ -3414,19 +3413,19 @@
 <span class="w">      </span><span class="c1"># cutover. +optional</span>
 <span class="w">      </span><span class="nt">prePromotionAnalysis</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">templates</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success-rate</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success-rate</span>
 <span class="w">        </span><span class="nt">args</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-name</span>
-<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook-svc.default.svc.cluster.local</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-name</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook-svc.default.svc.cluster.local</span>
 
 <span class="w">      </span><span class="c1"># Post-promotion analysis run which performs analysis after the service</span>
 <span class="w">      </span><span class="c1"># cutover. +optional</span>
 <span class="w">      </span><span class="nt">postPromotionAnalysis</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">templates</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success-rate</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success-rate</span>
 <span class="w">        </span><span class="nt">args</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-name</span>
-<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook-svc.default.svc.cluster.local</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-name</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook-svc.default.svc.cluster.local</span>
 
 <span class="w">      </span><span class="c1"># Name of the service that the rollout modifies as the preview service.</span>
 <span class="w">      </span><span class="c1"># +optional</span>
@@ -3483,7 +3482,6 @@
 
 <span class="w">    </span><span class="c1"># Canary update strategy</span>
 <span class="w">    </span><span class="nt">canary</span><span class="p">:</span>
-
 <span class="w">      </span><span class="c1"># Reference to a service which the controller will update to select</span>
 <span class="w">      </span><span class="c1"># canary pods. Required for traffic routing.</span>
 <span class="w">      </span><span class="nt">canaryService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary-service</span>
@@ -3530,7 +3528,7 @@
 <span class="w">      </span><span class="c1"># killed, new RC can be scaled up further, ensuring that total number</span>
 <span class="w">      </span><span class="c1"># of pods running at any time during the update is at most 130% of</span>
 <span class="w">      </span><span class="c1"># original pods. +optional</span>
-<span class="w">      </span><span class="nt">maxSurge</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;20%&quot;</span>
+<span class="w">      </span><span class="nt">maxSurge</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;20%&#39;</span>
 
 <span class="w">      </span><span class="c1"># Adds a delay before scaling down the previous ReplicaSet when the</span>
 <span class="w">      </span><span class="c1"># canary strategy is used with traffic routing (default 30 seconds).</span>
@@ -3554,135 +3552,141 @@
 <span class="w">      </span><span class="c1"># initial deploy of a rollout. +optional</span>
 <span class="w">      </span><span class="nt">analysis</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">templates</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success-rate</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success-rate</span>
 <span class="w">        </span><span class="nt">args</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-name</span>
-<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook-svc.default.svc.cluster.local</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-name</span>
+<span class="w">            </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook-svc.default.svc.cluster.local</span>
 
-<span class="w">        </span><span class="c1"># valueFrom.podTemplateHashValue is a convenience to supply the</span>
-<span class="w">        </span><span class="c1"># rollouts-pod-template-hash value of either the Stable ReplicaSet</span>
-<span class="w">        </span><span class="c1"># or the Latest ReplicaSet</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable-hash</span>
-<span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">podTemplateHashValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Stable</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">latest-hash</span>
-<span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">podTemplateHashValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Latest</span>
+<span class="w">          </span><span class="c1"># valueFrom.podTemplateHashValue is a convenience to supply the</span>
+<span class="w">          </span><span class="c1"># rollouts-pod-template-hash value of either the Stable ReplicaSet</span>
+<span class="w">          </span><span class="c1"># or the Latest ReplicaSet</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable-hash</span>
+<span class="w">            </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">podTemplateHashValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Stable</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">latest-hash</span>
+<span class="w">            </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">podTemplateHashValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Latest</span>
 
-<span class="w">        </span><span class="c1"># valueFrom.fieldRef allows metadata about the rollout to be</span>
-<span class="w">        </span><span class="c1"># supplied as arguments to analysis.</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
-<span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">fieldRef</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;region&#39;]</span>
+<span class="w">          </span><span class="c1"># valueFrom.fieldRef allows metadata about the rollout to be</span>
+<span class="w">          </span><span class="c1"># supplied as arguments to analysis.</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
+<span class="w">            </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">fieldRef</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;region&#39;]</span>
 
 <span class="w">      </span><span class="c1"># Steps define sequence of steps to take during an update of the</span>
 <span class="w">      </span><span class="c1"># canary. Skipped upon initial deploy of a rollout. +optional</span>
 <span class="w">      </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Sets the ratio of canary ReplicaSet to 20%</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
 
-<span class="w">      </span><span class="c1"># Sets the ratio of canary ReplicaSet to 20%</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">        </span><span class="c1"># Pauses the rollout for an hour. Supported units: s, m, h</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
 
-<span class="w">      </span><span class="c1"># Pauses the rollout for an hour. Supported units: s, m, h</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">        </span><span class="c1"># Pauses indefinitely until manually resumed</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="w">      </span><span class="c1"># Pauses indefinitely until manually resumed</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">        </span><span class="c1"># set canary scale to a explicit count without changing traffic weight</span>
+<span class="w">        </span><span class="c1"># (supported only with trafficRouting)</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 
-<span class="w">      </span><span class="c1"># set canary scale to a explicit count without changing traffic weight</span>
-<span class="w">      </span><span class="c1"># (supported only with trafficRouting)</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">        </span><span class="c1"># set canary scale to spec.Replica * (setweight / maxTrafficWeight) without changing traffic weight</span>
+<span class="w">        </span><span class="c1"># if maxTrafficWeight unspecified, it defaults to 100</span>
+<span class="w">        </span><span class="c1"># (supported only with trafficRouting)</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
 
-<span class="w">      </span><span class="c1"># set canary scale to a percentage of spec.replicas without changing traffic weight</span>
-<span class="w">      </span><span class="c1"># (supported only with trafficRouting)</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">        </span><span class="c1"># set canary scale to match the canary traffic weight (default behavior)</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">matchTrafficWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-<span class="w">      </span><span class="c1"># set canary scale to match the canary traffic weight (default behavior)</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">matchTrafficWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="c1"># executes the configured plugin by name with the provided configuration</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">plugin</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+<span class="w">            </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
 
-<span class="w">      </span><span class="c1"># Sets header based route with specified header values</span>
-<span class="w">      </span><span class="c1"># Setting header based route will send all traffic to the canary for the requests </span>
-<span class="w">      </span><span class="c1"># with a specified header, in this case request header &quot;version&quot;:&quot;2&quot;</span>
-<span class="w">      </span><span class="c1"># (supported only with trafficRouting, for Istio only at the moment)</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setHeaderRoute</span><span class="p">:</span>
-<span class="w">          </span><span class="c1"># Name of the route that will be created by argo rollouts this must also be configured</span>
-<span class="w">          </span><span class="c1"># in spec.strategy.canary.trafficRouting.managedRoutes</span>
-<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;header-route-1&quot;</span>
-<span class="w">          </span><span class="c1"># The matching rules for the header route, if this is missing it acts as a removal of the route.</span>
-<span class="w">          </span><span class="nt">match</span><span class="p">:</span>
-<span class="w">              </span><span class="c1"># headerName The name of the header to apply the match rules to.</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">headerName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;version&quot;</span>
-<span class="w">              </span><span class="c1"># headerValue must contain exactly one field of exact, regex, or prefix. Not all traffic routers support </span>
-<span class="w">              </span><span class="c1"># all types</span>
-<span class="w">              </span><span class="nt">headerValue</span><span class="p">:</span>
-<span class="w">                </span><span class="c1"># Exact will only match if the header value is exactly the same</span>
-<span class="w">                </span><span class="nt">exact</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span>
-<span class="w">                </span><span class="c1"># Will match the rule if the regular expression matches</span>
-<span class="w">                </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2.0.(.*)&quot;</span>
-<span class="w">                </span><span class="c1"># prefix will be a prefix match of the header value</span>
-<span class="w">                </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2.0&quot;</span>
-
-<span class="w">        </span><span class="c1"># Sets up a mirror/shadow based route with the specified match rules</span>
-<span class="w">        </span><span class="c1"># The traffic will be mirrored at the configured percentage to the canary service</span>
-<span class="w">        </span><span class="c1"># during the rollout</span>
+<span class="w">        </span><span class="c1"># Sets header based route with specified header values</span>
+<span class="w">        </span><span class="c1"># Setting header based route will send all traffic to the canary for the requests</span>
+<span class="w">        </span><span class="c1"># with a specified header, in this case request header &quot;version&quot;:&quot;2&quot;</span>
 <span class="w">        </span><span class="c1"># (supported only with trafficRouting, for Istio only at the moment)</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setMirrorRoute</span><span class="p">:</span>
-<span class="w">          </span><span class="c1"># Name of the route that will be created by argo rollouts this must also be configured</span>
-<span class="w">          </span><span class="c1"># in spec.strategy.canary.trafficRouting.managedRoutes</span>
-<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;header-route-1&quot;</span>
-<span class="w">          </span><span class="c1"># The percentage of the matched traffic to mirror to the canary</span>
-<span class="w">          </span><span class="nt">percentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
-<span class="w">          </span><span class="c1"># The matching rules for the header route, if this is missing it acts as a removal of the route.</span>
-<span class="w">          </span><span class="c1"># All conditions inside a single match block have AND semantics, while the list of match blocks have OR semantics.</span>
-<span class="w">          </span><span class="c1"># Each type within a match (method, path, headers) must have one and only one match type (exact, regex, prefix)</span>
-<span class="w">          </span><span class="c1"># Not all match types (exact, regex, prefix) will be supported by all traffic routers.</span>
-<span class="w">          </span><span class="nt">match</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="c1"># What HTTP method to match</span>
-<span class="w">                </span><span class="nt">exact</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;GET&quot;</span>
-<span class="w">                </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;P.*&quot;</span>
-<span class="w">                </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;POST&quot;</span>
-<span class="w">              </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="c1"># What HTTP url paths to match.</span>
-<span class="w">                </span><span class="nt">exact</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/test&quot;</span>
-<span class="w">                </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/test/.*&quot;</span>
-<span class="w">                </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
-<span class="w">              </span><span class="nt">headers</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">agent-1b</span><span class="p">:</span><span class="w"> </span><span class="c1"># What HTTP header name to use in the match.</span>
-<span class="w">                  </span><span class="nt">exact</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;firefox&quot;</span>
-<span class="w">                  </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;firefox2(.*)&quot;</span>
-<span class="w">                  </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;firefox&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setHeaderRoute</span><span class="p">:</span>
+<span class="w">            </span><span class="c1"># Name of the route that will be created by argo rollouts this must also be configured</span>
+<span class="w">            </span><span class="c1"># in spec.strategy.canary.trafficRouting.managedRoutes</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;header-route-1&#39;</span>
+<span class="w">            </span><span class="c1"># The matching rules for the header route, if this is missing it acts as a removal of the route.</span>
+<span class="w">            </span><span class="nt">match</span><span class="p">:</span>
+<span class="w">              </span><span class="c1"># headerName The name of the header to apply the match rules to.</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">headerName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;version&#39;</span>
+<span class="w">                </span><span class="c1"># headerValue must contain exactly one field of exact, regex, or prefix. Not all traffic routers support</span>
+<span class="w">                </span><span class="c1"># all types</span>
+<span class="w">                </span><span class="nt">headerValue</span><span class="p">:</span>
+<span class="w">                  </span><span class="c1"># Exact will only match if the header value is exactly the same</span>
+<span class="w">                  </span><span class="nt">exact</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2&#39;</span>
+<span class="w">                  </span><span class="c1"># Will match the rule if the regular expression matches</span>
+<span class="w">                  </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2.0.(.*)&#39;</span>
+<span class="w">                  </span><span class="c1"># prefix will be a prefix match of the header value</span>
+<span class="w">                  </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2.0&#39;</span>
 
-<span class="w">      </span><span class="c1"># an inline analysis step</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">analysis</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">templates</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success-rate</span>
+<span class="w">          </span><span class="c1"># Sets up a mirror/shadow based route with the specified match rules</span>
+<span class="w">          </span><span class="c1"># The traffic will be mirrored at the configured percentage to the canary service</span>
+<span class="w">          </span><span class="c1"># during the rollout</span>
+<span class="w">          </span><span class="c1"># (supported only with trafficRouting, for Istio only at the moment)</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setMirrorRoute</span><span class="p">:</span>
+<span class="w">            </span><span class="c1"># Name of the route that will be created by argo rollouts this must also be configured</span>
+<span class="w">            </span><span class="c1"># in spec.strategy.canary.trafficRouting.managedRoutes</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;header-route-1&#39;</span>
+<span class="w">            </span><span class="c1"># The percentage of the matched traffic to mirror to the canary</span>
+<span class="w">            </span><span class="nt">percentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="c1"># The matching rules for the header route, if this is missing it acts as a removal of the route.</span>
+<span class="w">            </span><span class="c1"># All conditions inside a single match block have AND semantics, while the list of match blocks have OR semantics.</span>
+<span class="w">            </span><span class="c1"># Each type within a match (method, path, headers) must have one and only one match type (exact, regex, prefix)</span>
+<span class="w">            </span><span class="c1"># Not all match types (exact, regex, prefix) will be supported by all traffic routers.</span>
+<span class="w">            </span><span class="nt">match</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="c1"># What HTTP method to match</span>
+<span class="w">                  </span><span class="nt">exact</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;GET&#39;</span>
+<span class="w">                  </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;P.*&#39;</span>
+<span class="w">                  </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;POST&#39;</span>
+<span class="w">                </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="c1"># What HTTP url paths to match.</span>
+<span class="w">                  </span><span class="nt">exact</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/test&#39;</span>
+<span class="w">                  </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/test/.*&#39;</span>
+<span class="w">                  </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/&#39;</span>
+<span class="w">                </span><span class="nt">headers</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">agent-1b</span><span class="p">:</span><span class="w"> </span><span class="c1"># What HTTP header name to use in the match.</span>
+<span class="w">                    </span><span class="nt">exact</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;firefox&#39;</span>
+<span class="w">                    </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;firefox2(.*)&#39;</span>
+<span class="w">                    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;firefox&#39;</span>
 
-<span class="w">      </span><span class="c1"># an inline experiment step</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">experiment</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
-<span class="w">          </span><span class="nt">templates</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">baseline</span>
-<span class="w">            </span><span class="nt">specRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span>
-<span class="w">            </span><span class="c1"># optional, creates a service for the experiment if set</span>
-<span class="w">            </span><span class="nt">service</span><span class="p">:</span>
-<span class="w">              </span><span class="c1"># optional, service: {} is also acceptable if name is not included</span>
-<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-service</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary</span>
-<span class="w">            </span><span class="nt">specRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary</span>
-<span class="w">            </span><span class="c1"># optional, set the weight of traffic routed to this version</span>
-<span class="w">            </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<span class="w">          </span><span class="nt">analyses</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mann-whitney</span>
-<span class="w">            </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mann-whitney</span>
-<span class="w">            </span><span class="c1"># Metadata which will be attached to the AnalysisRun.</span>
-<span class="w">            </span><span class="nt">analysisRunMetadata</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">labels</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">app.service.io/analysisType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smoke-test</span>
-<span class="w">              </span><span class="nt">annotations</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">link.argocd.argoproj.io/external-link</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://my-loggin-platform.com/pre-generated-link</span>
+<span class="w">        </span><span class="c1"># an inline analysis step</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">analysis</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">templates</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success-rate</span>
+
+<span class="w">        </span><span class="c1"># an inline experiment step</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">experiment</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">            </span><span class="nt">templates</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">baseline</span>
+<span class="w">                </span><span class="nt">specRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span>
+<span class="w">                </span><span class="c1"># optional, creates a service for the experiment if set</span>
+<span class="w">                </span><span class="nt">service</span><span class="p">:</span>
+<span class="w">                  </span><span class="c1"># optional, service: {} is also acceptable if name is not included</span>
+<span class="w">                  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-service</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary</span>
+<span class="w">                </span><span class="nt">specRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary</span>
+<span class="w">                </span><span class="c1"># optional, set the weight of traffic routed to this version</span>
+<span class="w">                </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">            </span><span class="nt">analyses</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mann-whitney</span>
+<span class="w">                </span><span class="nt">templateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mann-whitney</span>
+<span class="w">                </span><span class="c1"># Metadata which will be attached to the AnalysisRun.</span>
+<span class="w">                </span><span class="nt">analysisRunMetadata</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">                    </span><span class="nt">app.service.io/analysisType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">smoke-test</span>
+<span class="w">                  </span><span class="nt">annotations</span><span class="p">:</span>
+<span class="w">                    </span><span class="nt">link.argocd.argoproj.io/external-link</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://my-loggin-platform.com/pre-generated-link</span>
 
 <span class="w">      </span><span class="c1"># Anti-affinity configuration between desired and previous ReplicaSet.</span>
 <span class="w">      </span><span class="c1"># Only one must be specified.</span>
@@ -3702,7 +3706,7 @@
 <span class="w">        </span><span class="c1"># This is a list of routes that Argo Rollouts has the rights to manage it is currently only required for</span>
 <span class="w">        </span><span class="c1"># setMirrorRoute and setHeaderRoute. The order of managedRoutes array also sets the precedence of the route</span>
 <span class="w">        </span><span class="c1"># in the traffic router. Argo Rollouts will place these routes in the order specified above any routes already</span>
-<span class="w">        </span><span class="c1"># defined in the used traffic router if something exists. The names here must match the names from the </span>
+<span class="w">        </span><span class="c1"># defined in the used traffic router if something exists. The names here must match the names from the</span>
 <span class="w">        </span><span class="c1"># setHeaderRoute and setMirrorRoute steps.</span>
 <span class="w">        </span><span class="nt">managedRoutes</span><span class="p">:</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set-header</span>
@@ -3710,18 +3714,18 @@
 <span class="w">        </span><span class="c1"># Istio traffic routing configuration</span>
 <span class="w">        </span><span class="nt">istio</span><span class="p">:</span>
 <span class="w">          </span><span class="c1"># Either virtualService or virtualServices can be configured.</span>
-<span class="w">          </span><span class="nt">virtualService</span><span class="p">:</span><span class="w"> </span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span><span class="w">  </span><span class="c1"># required</span>
-<span class="w">            </span><span class="nt">routes</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span><span class="w"> </span><span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
-<span class="w">          </span><span class="nt">virtualServices</span><span class="p">:</span>
-<span class="w">          </span><span class="c1"># One or more virtualServices can be configured</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollouts-vsvc1</span><span class="w">  </span><span class="c1"># required</span>
+<span class="w">          </span><span class="nt">virtualService</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span><span class="w"> </span><span class="c1"># required</span>
 <span class="w">            </span><span class="nt">routes</span><span class="p">:</span>
 <span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span><span class="w"> </span><span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollouts-vsvc2</span><span class="w">  </span><span class="c1"># required</span>
-<span class="w">            </span><span class="nt">routes</span><span class="p">:</span>
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secondary</span><span class="w"> </span><span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
+<span class="w">          </span><span class="nt">virtualServices</span><span class="p">:</span>
+<span class="w">            </span><span class="c1"># One or more virtualServices can be configured</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollouts-vsvc1</span><span class="w"> </span><span class="c1"># required</span>
+<span class="w">              </span><span class="nt">routes</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span><span class="w"> </span><span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollouts-vsvc2</span><span class="w"> </span><span class="c1"># required</span>
+<span class="w">              </span><span class="nt">routes</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secondary</span><span class="w"> </span><span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
 
 <span class="w">        </span><span class="c1"># NGINX Ingress Controller routing configuration</span>
 <span class="w">        </span><span class="nt">nginx</span><span class="p">:</span>
@@ -3732,16 +3736,16 @@
 <span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secondary-ingress</span>
 <span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tertiary-ingress</span>
 <span class="w">          </span><span class="nt">annotationPrefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">customingress.nginx.ingress.kubernetes.io</span><span class="w"> </span><span class="c1"># optional</span>
-<span class="w">          </span><span class="nt">additionalIngressAnnotations</span><span class="p">:</span><span class="w">   </span><span class="c1"># optional</span>
+<span class="w">          </span><span class="nt">additionalIngressAnnotations</span><span class="p">:</span><span class="w"> </span><span class="c1"># optional</span>
 <span class="w">            </span><span class="nt">canary-by-header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">X-Canary</span>
 <span class="w">            </span><span class="nt">canary-by-header-value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iwantsit</span>
-<span class="w">          </span><span class="nt">canaryIngressAnnotations</span><span class="p">:</span><span class="w">   </span><span class="c1"># optional</span>
+<span class="w">          </span><span class="nt">canaryIngressAnnotations</span><span class="p">:</span><span class="w"> </span><span class="c1"># optional</span>
 <span class="w">            </span><span class="nt">my-custom-annotation.mygroup.com/key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
 
 <span class="w">        </span><span class="c1"># ALB Ingress Controller routing configuration</span>
 <span class="w">        </span><span class="nt">alb</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">ingress</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ingress</span><span class="w">  </span><span class="c1"># required</span>
-<span class="w">          </span><span class="nt">servicePort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">443</span><span class="w">  </span><span class="c1"># required</span>
+<span class="w">          </span><span class="nt">ingress</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ingress</span><span class="w"> </span><span class="c1"># required</span>
+<span class="w">          </span><span class="nt">servicePort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">443</span><span class="w"> </span><span class="c1"># required</span>
 <span class="w">          </span><span class="nt">annotationPrefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom.alb.ingress.kubernetes.io</span><span class="w"> </span><span class="c1"># optional</span>
 
 <span class="w">        </span><span class="c1"># Service Mesh Interface routing configuration</span>
@@ -3756,12 +3760,12 @@
 
 <span class="nt">status</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">pauseConditions</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">reason</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StepPause</span>
-<span class="w">    </span><span class="nt">startTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-10-00T1234</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">reason</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BlueGreenPause</span>
-<span class="w">    </span><span class="nt">startTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-10-00T1234</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">reason</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnalysisRunInconclusive</span>
-<span class="w">    </span><span class="nt">startTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-10-00T1234</span><span class="w"> </span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">reason</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StepPause</span>
+<span class="w">      </span><span class="nt">startTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-10-00T1234</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">reason</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BlueGreenPause</span>
+<span class="w">      </span><span class="nt">startTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-10-00T1234</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">reason</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnalysisRunInconclusive</span>
+<span class="w">      </span><span class="nt">startTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019-10-00T1234</span>
 </code></pre></div>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>You can find examples of Rollouts at:</p>
@@ -3817,10 +3821,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../../assets/versions.js"></script>
       
