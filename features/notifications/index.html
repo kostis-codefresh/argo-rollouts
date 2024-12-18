@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -3508,7 +3508,12 @@ the configmap located in the same namespaces where the rollout object is at.</p>
 <h2 id="default-trigger-templates">Default Trigger templates<a class="headerlink" href="#default-trigger-templates" title="Permanent link">&para;</a></h2>
 <p>Currently the following triggers have <a href="https://github.com/argoproj/argo-rollouts/tree/master/manifests/notifications">built-in templates</a>.</p>
 <ul>
+<li><code>on-analysis-run-error</code> when an error occurs during the execution of an analysis run</li>
+<li><code>on-analysis-run-failed</code> when an analysis run fails</li>
+<li><code>on-analysis-run-running</code> when an analysis run is running</li>
+<li><code>on-rollout-aborted</code> when a rollout process is aborted before completion.</li>
 <li><code>on-rollout-completed</code> when a rollout is finished and all its steps are completed</li>
+<li><code>on-rollout-paused</code> when a rollout is paused</li>
 <li><code>on-rollout-step-completed</code> when an individual step inside a rollout definition is completed</li>
 <li><code>on-rollout-updated</code> when a rollout definition is changed</li>
 <li><code>on-scaling-replica-set</code> when the number of replicas in a rollout is changed</li>
@@ -3565,8 +3570,8 @@ add blocks and attachments for Slack, subject for Email or URL path, and body fo
 <p>In addition to custom notification template administrator and configure custom triggers. Custom trigger defines the
 condition when the notification should be sent. The definition includes name, condition and notification templates reference.
 The condition is a predicate expression that returns true if the notification should be sent. The trigger condition
-evaluation is powered by <a href="https://github.com/antonmedv/expr">antonmedv/expr</a>.
-The condition language syntax is described at <a href="https://github.com/antonmedv/expr/blob/master/docs/Language-Definition.md">Language-Definition.md</a>.</p>
+evaluation is powered by <a href="https://github.com/expr-lang/expr">expr-lang/expr</a>.
+The condition language syntax is described at <a href="https://github.com/expr-lang/expr/blob/master/docs/language-definition.md">Language-Definition.md</a>.</p>
 <p>The trigger is configured in <code>argo-rollouts-notification-configmap</code> ConfigMap. For example the following trigger sends a notification
 when rollout pod spec uses <code>argoproj/rollouts-demo:purple</code> image:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
@@ -3635,7 +3640,7 @@ when rollout pod spec uses <code>argoproj/rollouts-demo:purple</code> image:</p>
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
         <script src="../../assets/versions.js"></script>
       
