@@ -1,0 +1,24 @@
+services:
+  # The "Brain" - Scrapes your app and holds data in RAM
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.retention.time=1h' # Keeps it light
+    ports:
+      - "9090:9090"
+    extra_hosts:
+      - "host.docker.internal:host-gateway" 
+    network_mode: host   
+
+  # The visualization & query builder
+  promlens:
+    image: prom/promlens:latest
+    network_mode: host
+    ports:
+      - "9001:9001"
+    command: 
+      - "--web.listen-address=:9001"
+      - "--web.default-prometheus-url=http://localhost:9090"

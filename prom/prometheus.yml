@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s # Fast updates for dev
+
+scrape_configs:
+  - job_name: 'app-preview'
+    static_configs:
+      - targets: ['172.17.72.94:8090']
+      - targets: ['localhost:8090']
+      - targets: ['host.docker.internal:8090']
+      - targets: ['127.0.0.1:8090']
+      - targets: ['host-gateway:8090']
