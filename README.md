@@ -1,4 +1,8 @@
 Example for single label
+Simple example for 2 relases
+
+
+Testing a fix for a single PR
 
 
 # Argo Rollouts - Progressive Delivery for Kubernetes
