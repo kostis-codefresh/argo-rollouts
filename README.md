@@ -1,3 +1,5 @@
+Example for single label
+
 
 # Argo Rollouts - Progressive Delivery for Kubernetes
 
