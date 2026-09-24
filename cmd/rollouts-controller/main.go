@@ -42,6 +42,7 @@ import (
 	"github.com/argoproj/argo-rollouts/utils/version"
 )
 
+//Code PR with code changes
 const (
 	// CLIName is the name of the CLI
 	cliName    = "argo-rollouts"
